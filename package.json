@@ -24,12 +24,7 @@
     "Other",
     "Visualization"
   ],
-  "activationEvents": [
-    "onCustomEditor:markwhen.timeline",
-    "onLanguage:markwhen",
-    "onCommand:markwhen.openPreview",
-    "onCommand:markwhen.viewInTimeline"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "configurationDefaults": {
     "markwhen": {
@@ -157,7 +152,7 @@
   },
   "dependencies": {
     "@markwhen/calendar": "^1.3.3",
-    "@markwhen/parser": "^0.11.2",
+    "@markwhen/parser": "^0.11.4",
     "@markwhen/timeline": "^1.3.0",
     "node-html-parser": "^6.1.6",
     "vscode-languageclient": "^8.0.2"
