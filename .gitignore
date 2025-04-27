@@ -1,6 +1,7 @@
 node_modules/
 out/
-.vscode/
+.vscode/settings.json
+.vscode/tasks.json
 *.vsix
 *.map
 assets/
