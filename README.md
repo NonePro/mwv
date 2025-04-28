@@ -314,4 +314,3 @@ npm run watch
 - 选择 "Run Extension" 配置
 
 ## Release Notes
-
