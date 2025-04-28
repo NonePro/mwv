@@ -140,7 +140,20 @@ export const useLpc = (listeners?: MessageListeners) => {
     ) {
       window.parent.postMessage(message, "*");
     } else {
-      console.error("Nothing to post to");
+      if (typeof window !== "undefined") {
+        console.log('模拟通信:', message);
+        if (message.request) {
+          setTimeout(() => {
+            const response = {
+              type: message.type,
+              response: true,
+              id: message.id,
+              params: {}
+            };
+            messageListener(new MessageEvent('message', { data: response }));
+          }, 100);
+        }
+      }
     }
   };
 
