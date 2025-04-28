@@ -31,7 +31,19 @@ Read the markwhen documentation [here](https://docs.markwhen.com).
    - `@markwhen/calendar`: 日历视图组件
    - `@markwhen/view-client`: 视图通信工具
 
-2. **视图渲染流程**
+2. **当前集成状态**
+   - 官方扩展使用压缩后的 `timeline` 包
+   - 通过 `view-client` 实现 Webview 与扩展通信
+   - 我们已将官方源码集成到本地仓库
+   - 目标：基于官方源码进行定制开发，并集成到 Webview
+
+3. **开发约束**
+   - 保持 Web 版本始终可运行
+   - 集成问题与功能开发隔离
+   - 优先解决集成层面的问题，避免修改核心实现
+   - 确保代码在 Web 环境中的正确性是集成的前提
+
+4. **视图渲染流程**
    - 文档内容通过 `@markwhen/parser` 解析为结构化数据
    - 解析后的数据通过 `@markwhen/view-client` 传递给视图组件
    - 视图组件（timeline/calendar）接收数据并渲染可视化界面
